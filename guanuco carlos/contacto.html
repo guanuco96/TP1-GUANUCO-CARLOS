@@ -18,8 +18,9 @@
         </ul>
     </nav>
     <section>
-        <h2>Envíanos un mensaje al formulario</h2>
-        <form>
+        <h2>Envíanos un mensaje al formulario 2025</h2>
+
+        <form onsubmit="enviarformulario(); return false;">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
             
@@ -30,10 +31,19 @@
             <textarea id="mensaje" name="mensaje" required></textarea>
 
             <button type="submit">Enviar</button>
+
         </form>
+
+        <script>
+            function enviarformulario() {
+              const nombre = document.getElementById("nombre").value;
+              const email = document.getElementById("email").value;
+              const mensaje = document.getElementById("mensaje").value;
+              alert("Mensaje enviado\n\nNombre: " + nombre + "\nCorreo: " + email + "\nMensaje: " + mensaje);
+            }
+        </script>
+        
     </section>
-    <footer>
-        <p>© 2024 - Información Cultural</p>
-    </footer>
+
 </body>
 </html>
